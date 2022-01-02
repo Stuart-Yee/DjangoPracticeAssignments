@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Survey Result</title>
+</head>
+<body>
+    <div class="container">
+        <p class="alert alert-success">Thanks for submitting this form! You have submitted this form {{request.session.submissions}} times now</p>
+        <p>Submitted Information</p>
+        <table class="table">
+            <tr>
+                <td>Name:</td><td>{{request.session.name}}</td>
+            </tr>
+                        <tr>
+                <td>Language:</td><td>{{request.session.language}}</td>
+            </tr>
+                        <tr>
+                <td>Location:</td><td>{{request.session.location}}</td>
+            </tr>
+                        <tr>
+                <td>Comment:</td><td>{{request.session.comment}}</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
