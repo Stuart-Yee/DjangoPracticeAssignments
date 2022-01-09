@@ -7,13 +7,16 @@
     <meta charset="UTF-8">
     <title>Ninja Gold!</title>
 </head>
-<body class="text-center">
+<body>
 <div class="container">
     <div class="row">
-        <div class="col-12"><h1>Ninja Gold!</h1></div>
+        <div class="col-12">
+            <h1 class="text-center">Ninja Gold!</h1>
+            <p>Your Gold: <span class="message">{{gold}}</span></p>
+        </div>
     </div>
     <div class="row">
-        <div class="col-12 actions">
+        <div class="col-12 actions text-center">
             <div class="action" id="farm">
                 <h3>Farm</h3>
                 <p>(earns 10-20 gold)</p>
@@ -46,6 +49,20 @@
                     <button>Find Gold!</button>
                 </form>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>Activity:</p>
+            <div class="message logs">
+                {% for i in '0123456789'|make_list %}
+                <p>Lorem ipsum magic</p>
+                {% endfor %}
+            </div>
+            <form action="/reset" method="post">
+                {% csrf_token %}
+                <button>Reset</button>
+            </form>
         </div>
     </div>
 </div>

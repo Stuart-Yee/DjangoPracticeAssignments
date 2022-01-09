@@ -43,6 +43,23 @@
     text-shadow: none;
 }
 
+.message {
+    border: 2px solid black;
+    box-shadow: 0 0 3px white, 0 0 5px red, 0 0 3px orangered;
+    background-color: whitesmoke;
+    color: black;
+    padding: 0 2px 0 2px;
+}
+
+.logs {
+    height: 200px;
+    overflow: scroll;
+}
+
+.logs p{
+    color: black;
+}
+
 #farm {
     background-image: url("/static/game/images/farm.jpg");
 }
@@ -57,4 +74,9 @@
 
 #casino {
     background-image: url("/static/game/images/casino.jpg");
+}
+
+.col-12 button {
+    margin: 10px 0 0 0;
+    color: black;
 }
