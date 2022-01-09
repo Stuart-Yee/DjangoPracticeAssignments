@@ -1,0 +1,60 @@
+.red {
+    color: red;
+    background-color: blue;
+}
+
+.container {
+    background-image: url("/static/game/images/mkbackground.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    height: 800px;
+}
+
+.container *{
+    color: gold;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.action {
+    border: 2px solid black;
+    box-shadow: 0 0 3px white, 0 0 5px red, 0 0 3px orangered;
+    padding: 15px;
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.action * {
+    color: black;
+    text-shadow: 0 0 3px white, 0 0 5px red, 0 0 3px orangered;
+}
+
+.action button{
+    color: black;
+    text-shadow: none;
+}
+
+#farm {
+    background-image: url("/static/game/images/farm.jpg");
+}
+
+#cave {
+    background-image: url("/static/game/images/cave.jpg");
+}
+
+#house {
+    background-image: url("/static/game/images/house.jpg");
+}
+
+#casino {
+    background-image: url("/static/game/images/casino.jpg");
+}

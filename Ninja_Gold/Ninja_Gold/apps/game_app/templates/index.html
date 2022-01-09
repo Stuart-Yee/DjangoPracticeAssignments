@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'game/css/styles.css' %}">
+    <meta charset="UTF-8">
+    <title>Ninja Gold!</title>
+</head>
+<body class="text-center">
+<div class="container">
+    <div class="row">
+        <div class="col-12"><h1>Ninja Gold!</h1></div>
+    </div>
+    <div class="row">
+        <div class="col-12 actions">
+            <div class="action" id="farm">
+                <h3>Farm</h3>
+                <p>(earns 10-20 gold)</p>
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    <button>Find Gold!</button>
+                </form>
+            </div>
+            <div class="action" id="cave">
+                <h3>Cave</h3>
+                <p>(earns 5-10 gold)</p>
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    <button>Find Gold!</button>
+                </form>
+            </div>
+            <div class="action" id="house">
+                <h3>House</h3>
+                <p>(earns 2-5 gold)</p>
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    <button>Find Gold!</button>
+                </form>
+            </div>
+            <div class="action" id="casino">
+                <h3>Casino</h3>
+                <p>(earns or takes 0-50 gold)</p>
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    <button>Find Gold!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
