@@ -1,3 +1,7 @@
+body {
+    background-color: #222222;
+}
+
 .red {
     color: red;
     background-color: blue;
@@ -53,11 +57,7 @@
 
 .logs {
     height: 200px;
-    overflow: scroll;
-}
-
-.logs p{
-    color: black;
+    overflow-y: scroll;
 }
 
 #farm {
@@ -74,6 +74,16 @@
 
 #casino {
     background-image: url("/static/game/images/casino.jpg");
+}
+
+.gain {
+    color: green;
+    font-weight: bold;
+}
+
+.loss {
+    color: red;
+    font-weight: bold;
 }
 
 .col-12 button {

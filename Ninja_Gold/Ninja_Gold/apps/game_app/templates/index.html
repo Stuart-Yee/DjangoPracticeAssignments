@@ -20,7 +20,7 @@
             <div class="action" id="farm">
                 <h3>Farm</h3>
                 <p>(earns 10-20 gold)</p>
-                <form action="#" method="post">
+                <form action="/farm" method="post">
                     {% csrf_token %}
                     <button>Find Gold!</button>
                 </form>
@@ -28,7 +28,7 @@
             <div class="action" id="cave">
                 <h3>Cave</h3>
                 <p>(earns 5-10 gold)</p>
-                <form action="#" method="post">
+                <form action="/cave" method="post">
                     {% csrf_token %}
                     <button>Find Gold!</button>
                 </form>
@@ -36,7 +36,7 @@
             <div class="action" id="house">
                 <h3>House</h3>
                 <p>(earns 2-5 gold)</p>
-                <form action="#" method="post">
+                <form action="/house" method="post">
                     {% csrf_token %}
                     <button>Find Gold!</button>
                 </form>
@@ -44,7 +44,7 @@
             <div class="action" id="casino">
                 <h3>Casino</h3>
                 <p>(earns or takes 0-50 gold)</p>
-                <form action="#" method="post">
+                <form action="/casino" method="post">
                     {% csrf_token %}
                     <button>Find Gold!</button>
                 </form>
@@ -55,8 +55,8 @@
         <div class="col-12">
             <p>Activity:</p>
             <div class="message logs">
-                {% for i in '0123456789'|make_list %}
-                <p>Lorem ipsum magic</p>
+                {% for log in logs %}
+                    <p class="{{log.change}}">{{log.activity}}</p>
                 {% endfor %}
             </div>
             <form action="/reset" method="post">
