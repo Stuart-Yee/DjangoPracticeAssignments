@@ -60,7 +60,7 @@ def farm(request):
     request.session["gold"] = gold
 
     logs = request.session["logs"]
-    log = {"activity": f"Found {found_gold} at the farm! ({now})",
+    log = {"activity": f"Found {found_gold} GOLD at the farm! ({now})",
            "change": "gain"}
     logs.append(log)
     request.session["logs"] = logs
@@ -76,7 +76,7 @@ def cave(request):
     request.session["gold"] = gold
 
     logs = request.session["logs"]
-    log = {"activity": f"Found {found_gold} in the cave! ({now})",
+    log = {"activity": f"Found {found_gold} GOLD in the cave! ({now})",
            "change": "gain"}
     logs.append(log)
     request.session["logs"] = logs
@@ -92,7 +92,7 @@ def house(request):
     request.session["gold"] = gold
 
     logs = request.session["logs"]
-    log = {"activity": f"Found {found_gold} at the house! ({now})",
+    log = {"activity": f"Found {found_gold} GOLD at the house! ({now})",
            "change": "gain"}
     logs.append(log)
     request.session["logs"] = logs
@@ -109,10 +109,10 @@ def casino(request):
 
     logs = request.session["logs"]
     if found_gold < 0:
-        log = {"activity": f"Lost {found_gold*-1} at the casino... ouch! ({now})",
+        log = {"activity": f"LOST {found_gold*-1} GOLD at the casino... ouch! ({now})",
                "change": "loss"}
     else:
-        log = {"activity": f"Won {found_gold} at the casino! ({now})",
+        log = {"activity": f"WON {found_gold} GOLD at the casino! ({now})",
                "change": "gain"}
 
     logs.append(log)
