@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'upload_file/css/stylesheet.css' %}">
+    <title>File Upload</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>File Upload</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <form action="/upload" method="post" enctype="multipart/form-data" accept="image/*">
+                    {% csrf_token %}
+                    <!--Django 3.0.0 only supports file upload with
+                    enctype="multipart/form-data" as a form attribute -->
+                    <input type="file" name="file">
+                    <button>Upload</button>
+                </form>
+                {% for picture in pictures %}
+                    <img class="image" src="{% static 'upload_file/uploads/' %}{{picture}}"/>
+                {% endfor %}
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+</body>
+</html>
