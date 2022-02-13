@@ -20,3 +20,6 @@ def new_user(request):
 
 
     return redirect("/users")
+
+def root(request):
+    return redirect("/users")
