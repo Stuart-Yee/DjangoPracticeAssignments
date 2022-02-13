@@ -5,9 +5,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     {% load static %}
     <link type="text/css" rel="stylesheet" href="{% static 'upload_file/css/stylesheet.css' %}">
+    <script src="{% static 'upload_file/javascript/scripts1.js' %}"></script>
     <title>File Upload</title>
 </head>
 <body>
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Login not enabled for this site</p>
+
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -24,6 +32,7 @@
                     <input type="file" name="file">
                     <button>Upload</button>
                 </form>
+                <!--<button id="myBtn">Open Modal</button>-->
                 {% for picture in pictures %}
                     <img class="image" src="{% static 'upload_file/uploads/' %}{{picture}}"/>
                 {% endfor %}
