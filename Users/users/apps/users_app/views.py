@@ -5,6 +5,8 @@ from . import models
 
 def index(request):
     context = {"users": models.User.objects.all()}
+    for key, value in request.session.items():
+        print(key, value)
 
     return render(request, "index.html", context=context)
 

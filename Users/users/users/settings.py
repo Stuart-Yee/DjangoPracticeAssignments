@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'apps.users_app'
 ]
 
+"""If you’ve customized the MIDDLEWARE setting, django.contrib.auth.middleware.AuthenticationMiddleware and 
+django.contrib.messages.middleware.MessageMiddleware must be included."""
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -51,6 +54,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'users.urls'
+
+"""Configure a DjangoTemplates backend in your TEMPLATES setting with django.template.context_processors.request, 
+django.contrib.auth.context_processors.auth, and django.contrib.messages.context_processors.messages in the 
+'context_processors' option of OPTIONS."""
 
 TEMPLATES = [
     {

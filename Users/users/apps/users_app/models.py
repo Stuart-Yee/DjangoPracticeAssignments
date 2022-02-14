@@ -4,7 +4,17 @@ from django.db import models
 # Create your models here.
 # Inside models.py
 
-# Create your models here.
+"""
+NOTE TO SELF:
+Need to remember to:
+
+>>> python manage.py migrate
+>>> python manage.py makemigrations
+
+each time this file is changed
+"""
+
+#Admin users found in django.contrib.auth.models
 
 class User(models.Model):
     first_name = models.CharField(max_length=255)
@@ -13,6 +23,21 @@ class User(models.Model):
     age = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.first_name
+
+class Game(models.Model):
+    game_name = models.CharField(max_length=100)
+    number_of_players = models.IntegerField()
+    complexity = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.game_name
+
 
 
 
