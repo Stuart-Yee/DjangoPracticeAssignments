@@ -1,5 +1,7 @@
 from __future__ import unicode_literals
 from django.db import models
+from django.contrib.auth.models import User as U
+
 
 # Create your models here.
 # Inside models.py
@@ -15,6 +17,14 @@ each time this file is changed
 """
 
 #Admin users found in django.contrib.auth.models
+
+class Customer(models.Model):
+    user = models.OneToOneField(U, on_delete=models.CASCADE)
+    address = models.CharField(max_length=255)
+    full_name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.full_name
 
 class User(models.Model):
     first_name = models.CharField(max_length=255)
