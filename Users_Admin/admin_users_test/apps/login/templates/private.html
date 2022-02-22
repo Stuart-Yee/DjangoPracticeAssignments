@@ -5,11 +5,10 @@
     <title>Display</title>
 </head>
 <body>
-    <p>Hello there!</p>
-    <p>User logged in: {{logged_name}}</p>
+    <p>Hello there! This is secret stuff!</p>
+    <p>User logged in: {{request.user.first_name}} {{request.user.last_name}}</p>
     <a href="/logout/">Logout</a>
     <a href="/accounts/login/">Login</a>
     <a href="/admin">Admin Site</a>
-    <a href="/dashboard">Secret Stuff</a>
 </body>
 </html>
